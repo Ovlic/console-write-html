@@ -1,6 +1,7 @@
 var aText = new Array(
     "jeffery bonked his head this text must be longer so have more wow yes i know amazing",
-    "send an ambulance to him"
+    "send an ambulance to him",
+    "this is more text are you even watching asia cuz i dont think so"
 )
 
 var iSpeed = 100; // time delay of print out
@@ -68,7 +69,7 @@ function typewriter() {
 
 typewriter();
 
-
+/*
 setInterval(function blink() {
     var box_cursor = document.getElementById("cursor")
     if(prevtyping === false && typing === true){
@@ -90,9 +91,39 @@ setInterval(function blink() {
         $('#cursor').toggleClass('hidden');
     }
     box_cursor.removeAttribute("visible");
-    $('#cursor').toggleClass('hidden');
+    box_cursor.setAttribute("class", "hidden");
+    //box_cursor.className = ''
+    document.getElementById("test").style.display= 'none';
+    
+    //$('#cursordiv').toggleClass('hidden');
     return
-}, 600);
+}, 600);*/
+
+setInterval(function blink2() {
+    if(prevtyping === false && typing === true){
+        console.log("prevtyping false typing true")
+        //box_cursor.removeAttribute("hidden");
+        box_cursor.style.display = "inline";
+    }
+    if(typing){
+        console.log("typing")
+
+        var box_cursor = document.getElementById("cursor")
+        //box_cursor.removeAttribute("hidden");
+        //box_cursor.setAttribute("class", "visible");
+        box_cursor.style.display = "inline";
+        console.log(box_cursor.classList)
+        return
+    } else {
+        box_cursor = document.getElementById("cursor")
+        
+        if (box_cursor.style.display === "none") {
+            box_cursor.style.display = "inline";
+        } else {
+            box_cursor.style.display = "none";
+        }
+    }
+}, 600)
 
 $(document.body).on('keypress', function(event) {
     $('#cursor').before(String.fromCharCode(event.keyCode));
