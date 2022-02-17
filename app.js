@@ -1,7 +1,15 @@
 var aText = new Array(
-    "jeffery bonked his head this text must be longer so have more wow yes i know amazing",
-    "send an ambulance to him",
-    "this is more text are you even watching asia cuz i dont think so"
+    "(Transcript started on Feb 14 2021, Finished on Feb 17 2021)",
+    "",
+    "",
+    "Dear Asia,",
+    "",
+    "Look where we are right now. It all started when we met in a game of Arsenal, and now, 9 months later, we are the closest of friends. You stayed in contact through difficult times for you and me. You have really helped me persevere through life. You made me look forward toward the time where I can forget about what happened that day and have fun chatting or playing games with you. I also appreciate the fact that you introduced me into your friend groups. I now have many more people to talk to and mingle with.",
+    "",
+    "I'm very grateful that you are still in my life today and hope that you will still be in contact with me in the future. I can't possibly express how thankful for you I am.",
+    "",
+    "Happy Valentine's Day,",
+    "Ovlic",
 )
 
 var iSpeed = 100; // time delay of print out
@@ -22,6 +30,7 @@ function typewriter() {
     iRow = Math.max(0, iIndex - iScrollAt);
     var destination = document.getElementById("typedtext");
     var box_cursor = document.getElementById("cursor")
+    var afterglitch = document.getElementById("glitchtxtbelow")
     var isScrolledToBottom = destination.scrollHeight - destination.clientHeight <= destination.scrollTop + 1
 
     //console.log(box_cursor.classList)
@@ -59,8 +68,11 @@ function typewriter() {
             iArrLength = aText[iIndex].length;
             setTimeout("typewriter()", 500);
         } else{
-            var elem = document.getElementById("glitchtxt")
+            /*var elem = document.getElementById("glitchtxt")
             elem.style.display = "initial"
+            setTimeout(function(){
+                afterglitch.style.display = "initial"
+            })*/
         }
     } else {
         //console.log("at else")
@@ -109,13 +121,10 @@ setInterval(function blink2() {
         box_cursor.style.display = "inline";
     }
     if(typing){
-        console.log("typing")
-
         var box_cursor = document.getElementById("cursor")
         //box_cursor.removeAttribute("hidden");
         //box_cursor.setAttribute("class", "visible");
         box_cursor.style.display = "inline";
-        console.log(box_cursor.classList)
         return
     } else {
         box_cursor = document.getElementById("cursor")
@@ -128,6 +137,7 @@ setInterval(function blink2() {
     }
 }, 600)
 
+/*
 $(document.body).on('keypress', function(event) {
     $('#cursor').before(String.fromCharCode(event.keyCode));
-});
+});*/
