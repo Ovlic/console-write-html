@@ -58,6 +58,9 @@ function typewriter() {
             destination.insertBefore(br, box_cursor);
             iArrLength = aText[iIndex].length;
             setTimeout("typewriter()", 500);
+        } else{
+            var elem = document.getElementById("glitchtxt")
+            elem.style.display = "initial"
         }
     } else {
         //console.log("at else")
@@ -67,7 +70,8 @@ function typewriter() {
     prevtyping = typing
 }
 
-typewriter();
+
+typewriter()
 
 /*
 setInterval(function blink() {
@@ -78,7 +82,6 @@ setInterval(function blink() {
     }
     if(typing){
         console.log("typing")
-
         var box_cursor = document.getElementById("cursor")
         box_cursor.removeAttribute("hidden");
         box_cursor.setAttribute("class", "visible");

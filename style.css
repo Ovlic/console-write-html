@@ -1,17 +1,21 @@
 body {
-    background-color: #181414;
-    font-family: 'consolas';
-    font-size:30px; 
-    margin: 10px 50px; 
-    letter-spacing: 6px; 
-    font-weight: bold;
-  }
+  background-color: #181414;
+  font-family: 'consolas';
+  font-size:30px; 
+  margin: 10px 50px; 
+  letter-spacing: 6px; 
+  font-weight: bold;
+  line-height: 125%;
+}
 #insidethingy {
-    height: 100%;
-  }
+  height: 100%;
+}
 .hidden {
-    visibility: hidden;
-  }
+  visibility: hidden;
+}
 .visible {
-    visibility: visible;
-  }
+  visibility: visible;
+}
+.test {
+  display:initial
+}
